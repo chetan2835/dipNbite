@@ -1,0 +1,165 @@
+.adminLayout {
+  display: flex;
+  height: 100vh;
+  background-color: #0f0f0f;
+  color: #fff;
+  font-family: var(--font-body);
+}
+
+.sidebar {
+  width: 250px;
+  background: rgba(255,255,255,0.02);
+  border-right: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.nav button {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.nav button:hover, .nav button.active {
+  background: rgba(200, 161, 101, 0.1);
+  color: var(--color-secondary);
+  border-right: 3px solid var(--color-secondary);
+}
+
+.backBtn {
+  margin: 1rem 2rem;
+  padding: 0.8rem;
+  background: rgba(255,255,255,0.05);
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.backBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.statCard {
+  padding: 2rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon {
+  color: var(--color-secondary);
+  padding: 1rem;
+  background: rgba(200, 161, 101, 0.1);
+  border-radius: 12px;
+}
+
+.statCard p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.statCard h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.chartContainer {
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.chartContainer h3 {
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.placeholder {
+  padding: 4rem;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.placeholder h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .adminLayout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

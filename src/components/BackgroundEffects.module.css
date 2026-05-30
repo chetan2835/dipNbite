@@ -1,0 +1,83 @@
+.bgContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+
+.noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.orb1, .orb2, .orb3, .orb4 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  animation: float 20s infinite ease-in-out alternate;
+  z-index: 1;
+}
+
+.orb1 {
+  width: 40vw;
+  height: 40vw;
+  background: var(--color-secondary);
+  top: -10vw;
+  left: -10vw;
+}
+
+.orb2 {
+  width: 45vw;
+  height: 45vw;
+  background: var(--color-hover);
+  bottom: -15vw;
+  right: -10vw;
+  animation-delay: -5s;
+}
+
+.orb3 {
+  width: 30vw;
+  height: 30vw;
+  background: var(--color-primary);
+  top: 40%;
+  left: 30%;
+  animation-delay: -10s;
+  opacity: 0.2;
+}
+
+.orb4 {
+  width: 35vw;
+  height: 35vw;
+  background: var(--color-success);
+  top: 60%;
+  right: 20%;
+  animation-delay: -15s;
+  opacity: 0.1;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(5vw, -5vh) scale(1.1);
+  }
+  66% {
+    transform: translate(-3vw, 4vh) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}

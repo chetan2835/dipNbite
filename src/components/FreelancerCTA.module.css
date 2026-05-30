@@ -1,0 +1,80 @@
+.badge {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-button);
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 1000;
+  color: var(--color-accent);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.pulse {
+  width: 10px;
+  height: 10px;
+  background: var(--color-success);
+  border-radius: 50%;
+  position: relative;
+}
+
+.pulse::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  border: 2px solid var(--color-success);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.ctaSection {
+  padding: 80px 5%;
+  background: linear-gradient(135deg, var(--color-primary), #1a0f0a);
+  text-align: center;
+  border-top: 1px solid var(--color-secondary);
+}
+
+.ctaContent h2 {
+  font-size: 3rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.contactBtn {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  background: var(--color-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(212, 160, 23, 0.4);
+}

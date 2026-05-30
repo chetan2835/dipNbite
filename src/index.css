@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #2C1810;     /* Deep Espresso Brown */
+  --color-secondary: #C8A165;   /* Coffee Gold */
+  --color-accent: #F8F5F0;      /* Cream White */
+  --color-background: #0F0F0F;  /* Rich Black */
+  --color-success: #8A9A5B;     /* Olive Green */
+  --color-hover: #D4A017;       /* Warm Amber */
+
+  --font-heading: 'Playfair Display', serif;
+  --font-subheading: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-button: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-accent);
+  overflow-x: hidden;
+  cursor: default; /* We will implement custom cursor in React */
+}
+
+section {
+  scroll-margin-top: 80px; /* Offset for sticky navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+.subheading {
+  font-family: var(--font-subheading);
+}
+
+button, .btn {
+  font-family: var(--font-button);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
