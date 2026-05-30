@@ -12,7 +12,7 @@ export default function FreelancerCTA() {
         <div className={styles.ctaContent}>
           <h2>Get Your Cafe Website</h2>
           <p>Impress your customers with a premium, 3D-interactive digital presence.</p>
-          <a href="mailto:contact@chetanpunj.com" className={`${styles.contactBtn} btn`}>
+          <a href="mailto:chetanpunj481@gmail.com" className={`${styles.contactBtn} btn`}>
             Contact Developer
           </a>
         </div>
