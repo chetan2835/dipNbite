@@ -8,7 +8,7 @@ import styles from './Interactive3D.module.css';
 function Bean({ position, scale, rotationSpeed }: any) {
   const mesh = useRef<THREE.Mesh>(null);
   
-  useFrame((state) => {
+  useFrame(() => {
     if (mesh.current) {
       mesh.current.rotation.x += rotationSpeed.x;
       mesh.current.rotation.y += rotationSpeed.y;
@@ -29,7 +29,7 @@ function Bean({ position, scale, rotationSpeed }: any) {
 function Donut({ position, scale }: any) {
   const mesh = useRef<THREE.Mesh>(null);
   
-  useFrame((state) => {
+  useFrame(() => {
     if (mesh.current) {
       mesh.current.rotation.x += 0.005;
       mesh.current.rotation.y += 0.01;
